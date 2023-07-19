@@ -158,6 +158,8 @@ export function getHeaders() {
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
     Accept: "application/json",
+    "HTTP-Referer": window.location.href,
+    "X-Title": "AnyGPT Next",
   };
   const modelConfig = useChatStore.getState().currentSession().mask.modelConfig;
   const isGoogle = modelConfig.model.startsWith("gemini");
