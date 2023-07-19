@@ -224,6 +224,8 @@ export function getHeaders(ignoreHeaders: boolean = false) {
     headers = {
       "Content-Type": "application/json",
       Accept: "application/json",
+      "HTTP-Referer": window.location.href,
+      "X-Title": "AnyGPT Next",
     };
   }
 
